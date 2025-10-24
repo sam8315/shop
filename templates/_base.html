@@ -17,14 +17,14 @@
     <span>
         welcome {{ user.username }} |
     </span>
-    <form method="post" action="{% url 'logout' %}" class="d-inline">
+    <form method="post" action="{% url 'account_logout' %}" class="d-inline">
         {% csrf_token %}
         <button class="btn btn-sm btn-danger" type="submit">Log out</button>
     </form>
 {% else %}
-    <a href="{% url 'login' %}">login</a>
+    <a href="{% url 'account_login' %}">login</a>
     <span> OR </span>
-    <a href="{% url 'signup' %}">signup</a>
+    <a href="{% url 'account_signup' %}">signup</a>
 {% endif %}
 
 
